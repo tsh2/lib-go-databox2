@@ -7,7 +7,7 @@ COPY . .
 
 #get dependencies after copy to stop them from being cached
 RUN go get -u golang.org/x/net/websocket
-RUN go get -u github.com/me-box/lib-go-databox
+RUN go get -u github.com/tsh2/lib-go-databox
 RUN addgroup -S databox && adduser -S -g databox databox
 RUN GGO_ENABLED=0 GOOS=linux go build -a -tags netgo -installsuffix netgo -ldflags '-d -s -w -extldflags "-static"' -o app /src/main.go
 
