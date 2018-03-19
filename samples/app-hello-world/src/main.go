@@ -7,7 +7,7 @@ import (
 	"os"
 
 	//databox "github.com/tsh2/lib-go-databox"
-	databox "github.com/toshbrown/lib-go-databox"
+	databox "github.com/tsh2/lib-go-databox"
 )
 
 var dataSourceTest, _ = databox.HypercatToDataSourceMetadata(os.Getenv("DATASOURCE_test"))
