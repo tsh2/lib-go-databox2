@@ -36,6 +36,7 @@ func makeStoreRequestPOST(href string, data string) (string, error) {
 	//perform store request with token
 	req, err := http.NewRequest(method, href, bytes.NewBufferString(data))
 	req.Header.Set("X-Api-Key", token)
+	req.Header.Set("App-name", "osmonitor")
 	req.Header.Set("Content-Type", "application/json")
 	req.Close = true
 	resp, err := databoxClient.Do(req)
